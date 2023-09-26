@@ -19,17 +19,24 @@ DOGS = [
     }
 ]
 
-students = [
+posts = [
     {
-        "name": "name",
-        "password": "password"
+        "title": "Post 1",
+        "content": "Beatae minus ullam ducimus minima magnam non dolores iure? \
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. "
     },
     {
-        "name": "name1",
-        "password": "password1"
-    }
+        "title": "Post 2",
+        "content": "Beatae minus ullam ducimus minima magnam non dolores iure? \
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+    },
+    {
+        "title": "Post 3",
+        "content": "Beatae minus ullam ducimus minima magnam non dolores iure? \
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+    },
 ]
 
 @app.get("/", tags=["home"], description="Returns the home html file for preview.")
 async def home_page(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request, "students": students, "dogs": DOGS})
+    return templates.TemplateResponse("home.html", {"request": request, "posts": posts, "dogs": DOGS})
