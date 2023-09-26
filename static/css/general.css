@@ -1,0 +1,41 @@
+/*
+    General CSS File.
+*/
+
+*
+{
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: #161618;
+    color: #FFFFFF;
+}
+
+nav 
+{
+    background-color: #FFFFFF;
+    color: #161618;
+}
+
+@keyframes nav-link-hover
+{
+    0%   {border-bottom: solid #9258c4 2px; width: 0%;}
+    25%  {border-bottom: solid #9258c4 2px; width: 25%;}
+    50%  {border-bottom: solid #9258c4 2px; width: 50%;}
+    75%  {border-bottom: solid #9258c4 2px; width: 75%;}
+    100% {border-bottom: solid #9258c4 2px; width: 100%;}
+}
+.nav-link:hover 
+{
+    animation: nav-link-hover .5s ease-in;
+    animation-fill-mode: both;
+}
+
+
+/*
+    End of General CSS File.
+*/
